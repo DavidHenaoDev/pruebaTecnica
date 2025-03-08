@@ -1,0 +1,36 @@
+<div class="container">
+    <mat-card class="estudainte-card">
+        <mat-card-header>
+            <mat-card-title>
+                Estudiantes
+            </mat-card-title>
+        </mat-card-header>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-content>
+            <table mat-table [dataSource]="estudiantesDataSource" class="mat-elvation-z1"> 
+                <ng-container matColumnDef="id_persona">
+                    <th mat-header-cell *matHeaderCellDef> ID </th>
+                    <td mat-cell *matCellDef="let estudiante"> {{estudiante.persona?.id_persona}} </td>
+                </ng-container>
+                <ng-container matColumnDef="numero_matricula">
+                    <th mat-header-cell *matHeaderCellDef> Numero de Matricula </th>
+                    <td mat-cell *matCellDef="let estudiante"> {{estudiante.numero_matricula}} </td>
+                </ng-container>
+                <ng-container matColumnDef="grado">
+                    <th mat-header-cell *matHeaderCellDef> Grado </th>
+                    <td mat-cell *matCellDef="let estudiante"> {{estudiante.grado}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="grado">
+                    <th mat-header-cell *matHeaderCellDef> Grado </th>
+                    <td mat-cell *matCellDef="let estudiante"> {{estudiante.grado}} </td>
+                </ng-container> 
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>  
+        </mat-card-content>
+    </mat-card>
+</div>

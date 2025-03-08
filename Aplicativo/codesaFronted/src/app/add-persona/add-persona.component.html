@@ -1,0 +1,57 @@
+<div class="container add-persona-container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Agregar Persona</mat-card-title>
+        </mat-card-header>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-content>
+            <form [formGroup]="personaForm" (ngSubmit)="agregarPersona()" class="add-persona-form">
+                <mat-form-field>
+                    <mat-label>Nombre:</mat-label>
+                    <input matInput type="text" formControlName="nombre">
+                    <mat-error *ngIf="personaForm.get('nombre')?.invalid && personaForm.get('nombre')?.touched">
+                        El nombre es requerido.
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Apellido:</mat-label>
+                    <input matInput type="text" formControlName="apellido">
+                    <mat-error *ngIf="personaForm.get('apellido')?.invalid && personaForm.get('apellido')?.touched">
+                        El apellido es requerido.
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Fecha de Nacimiento:</mat-label>
+                    <input matInput type="date" formControlName="fecha_nacimiento">
+                    <mat-error *ngIf="personaForm.get('fecha_nacimiento')?.invalid && personaForm.get('fecha_nacimiento')?.touched">
+                        La fecha de nacimiento es requerida.
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Email:</mat-label>
+                    <input matInput type="email" formControlName="email">
+                    <mat-error *ngIf="personaForm.get('email')?.invalid && personaForm.get('email')?.touched">
+                        <span *ngIf="personaForm.get('email')?.errors?.['required']">El email es requerido.</span>
+                        <span *ngIf="personaForm.get('email')?.errors?.['email']">El email no es válido.</span>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Teléfono:</mat-label>
+                    <input matInput type="text" formControlName="telefono">
+                    <mat-error *ngIf="personaForm.get('telefono')?.invalid && personaForm.get('telefono')?.touched">
+                        <span *ngIf="personaForm.get('telefono')?.errors?.['required']">El teléfono es requerido.</span>
+                        <span *ngIf="personaForm.get('telefono')?.errors?.['pattern']">El teléfono debe tener 10 dígitos.</span>
+                    </mat-error>
+                </mat-form-field>
+
+                <button mat-raised-button color="primary" type="submit" [disabled]="personaForm.invalid">Guardar</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

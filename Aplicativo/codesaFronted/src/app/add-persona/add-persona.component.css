@@ -1,0 +1,21 @@
+.add-persona-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.add-persona-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Ajusta el ancho según tus necesidades */
+}
+
+.mat-form-field {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button[mat-raised-button] {
+    margin-top: 20px;
+}

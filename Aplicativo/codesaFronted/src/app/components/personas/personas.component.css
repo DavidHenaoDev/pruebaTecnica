@@ -1,0 +1,59 @@
+mat-card {
+    background-color: #fff;
+}
+
+.content-wrapper {
+    display: flex; /* Usamos flexbox */
+    flex-direction: column; /* Alineamos los elementos en columna */
+}
+
+
+.button-add {
+    align-items: center;
+    max-width: max-content;
+    background-color: rgb(187, 184, 0);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.button-delete {
+    align-items: center;
+    max-width: max-content;
+    background-color: #ca0000;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.button-delete :hover {
+    align-items: center;
+    max-width: max-content;
+    background-color: #ca0000;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.icon-add-persona {
+    color: #fff;
+}
+
+.table-container {
+    overflow-x: auto;
+    width: 100%; /* La tabla ocupa todo el ancho disponible */
+}
+
+.responsive-table {
+    width: 100%;
+}
+
+.responsive-table th,
+.responsive-table td {
+    white-space: nowrap;
+    padding: 8px;
+}
+
+@media (max-width: 600px) {
+    .responsive-table .mat-column-fecha_nacimiento,
+    .responsive-table .mat-column-email {
+        display: none;
+    }
+}

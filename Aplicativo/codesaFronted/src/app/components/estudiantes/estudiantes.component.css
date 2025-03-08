@@ -1,0 +1,46 @@
+mat-card{
+    background-color: #fff;
+}   
+
+.table{
+    width: 100%;
+    
+}
+
+.table th{
+    padding: 10px;
+    background-color: #05b;
+    text-align: center;
+    color: #fff;
+}
+
+.table td{
+    border: solid 1px #000;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.estudainte-card{
+    display: inline-block;
+}
+
+.table-container {
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+}
+
+.responsive-table {
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho */
+}
+
+.responsive-table th,
+.responsive-table td {
+    white-space: nowrap; /* Evita que el texto se envuelva */
+    padding: 8px; /* Ajusta el padding según sea necesario */
+}
+
+@media (max-width: 600px) {
+    .responsive-table .mat-column-fecha_nacimiento,
+    .responsive-table .mat-column-email {
+        display: none; /* Oculta columnas en pantallas pequeñas */
+    }
+}

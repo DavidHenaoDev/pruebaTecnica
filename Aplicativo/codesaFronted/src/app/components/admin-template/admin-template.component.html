@@ -1,0 +1,103 @@
+<mat-toolbar class="toolbar-main">
+    <h1 style="flex: auto" class="h1_titulo"><strong> GESTION ESCOLAR</strong></h1>
+    <span style="flex: auto"></span>
+    <button class="button-icon-toolbar" [matMenuTriggerFor]="importMenu">
+
+        <mat-icon class="icon-toolbar">
+            menu
+        </mat-icon>
+
+        <mat-menu #importMenu="matMenu">
+            <button mat-menu-item routerLink="/home">
+                <mat-icon>home</mat-icon>
+                Home
+            </button>
+            <button mat-menu-item routerLink="/personas">
+                <mat-icon>school</mat-icon>
+                Personas
+            </button>
+            <button mat-menu-item routerLink="/estudiantes">
+                <mat-icon>school</mat-icon>
+                Estudiantes
+            </button>
+            <button mat-menu-item routerLink="/profesores">
+                <mat-icon>school</mat-icon>
+                Profesores
+            </button>
+            <button mat-menu-item routerLink="/administrativos">
+                <mat-icon>school</mat-icon>
+                Administrativo
+            </button>
+            <button mat-menu-item routerLink="/cursos">
+                <mat-icon>school</mat-icon>
+                Cursos
+            </button>
+            <button mat-menu-item routerLink="/inscripciones">
+                <mat-icon>school</mat-icon>
+                Inscripciones
+            </button>
+        </mat-menu>
+
+    </button>
+    <div style="min-height: 600px;"></div>
+</mat-toolbar>
+
+<mat-drawer-container>
+    <mat-drawer opened="true" mode="side" position="start">
+        <mat-list>
+            <mat-list-item>
+                <button routerLink="/home" class="button-drawer" mat-raised-button>
+                    <mat-icon>home</mat-icon>
+                    Home
+                </button>
+            </mat-list-item>
+
+            <mat-list-item>
+                <button routerLink="/personas" class="button-drawer" mat-raised-button>
+                    <mat-icon>school</mat-icon>
+                    Personas
+                </button>
+            </mat-list-item>
+
+            <mat-list-item>
+                <button routerLink="/estudiantes" class="button-drawer" mat-raised-button>
+                    <mat-icon>school</mat-icon>
+                    Estudiantes
+                </button>
+            </mat-list-item>
+
+            <mat-list-item>
+                <button routerLink="/profesores" class="button-drawer" mat-raised-button>
+                    <mat-icon>school</mat-icon>
+                    Profesores
+                </button>
+            </mat-list-item>
+
+            <mat-list-item>
+                <button routerLink="/administrativos" class="button-drawer" mat-raised-button>
+                    <mat-icon>school</mat-icon>
+                    Administrativos
+                </button>
+            </mat-list-item>
+
+            <mat-list-item>
+                <button routerLink="/cursos" class="button-drawer" mat-raised-button>
+                    <mat-icon>school</mat-icon>
+                    Cursos
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button routerLink="/inscripciones" class="button-drawer" mat-raised-button>
+                    <mat-icon>school</mat-icon>
+                    Inscripciones
+                </button>
+            </mat-list-item>
+        </mat-list>
+
+    </mat-drawer>
+    <mat-drawer-content>
+        <div style="min-height: 600px; ">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
